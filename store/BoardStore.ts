@@ -74,6 +74,8 @@ export const useBoardStore = create<BoardState>((set, get) => ({
 
     const fileUploaded = await uploadImage(image!);
 
+    console.log(fileUploaded);
+
     if (fileUploaded) {
       file = {
         bucketId: fileUploaded.bucketId,
