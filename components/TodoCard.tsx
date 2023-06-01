@@ -36,6 +36,7 @@ function TodoCard({
           setImageUrl(url.toString());
         }
       };
+      fetchImage();
     }
   }, [todo]);
 
@@ -56,13 +57,13 @@ function TodoCard({
         </button>
       </div>
       {imageUrl && (
-        <div className="relative h-full w-full rounded-b-md">
+        <div className="relative h-full w-full rounded-b-md ">
           <Image
             src={imageUrl}
             alt="task image"
             width={400}
             height={200}
-            className="w-full object-contain rounded-b-md"
+            className="w-full object-cover rounded-b-md max-h-48"
           />
         </div>
       )}

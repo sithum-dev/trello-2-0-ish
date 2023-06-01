@@ -24,7 +24,6 @@ function Column({ id, todos, index }: Props) {
   const openModal = useModalStore((state) => state.openModal);
 
   const handleAddTodo = () => {
-    console.log(id);
     setNewTaskType(id);
     openModal();
   };
